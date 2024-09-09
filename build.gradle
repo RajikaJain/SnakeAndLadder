@@ -37,4 +37,10 @@ jacocoTestReport {
 jacoco {
     toolVersion = "0.8.7"
 }
+sonarqube {
+    properties {
+        property "sonar.projectName", "Extensure_Demo_Gradle"
+        property "sonar.coverage.jacoco.xmlReportPaths", "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
+    }
+}
 
