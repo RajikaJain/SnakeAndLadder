@@ -20,6 +20,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+     reports {
+        junitXml.required.set(true)  // Enable JUnit XML reports
+        junitXml.outputLocation.set(file("$buildDir/test-results"))  // Set destination for JUnit reports
+    }
 }
 
 jacocoTestReport {
