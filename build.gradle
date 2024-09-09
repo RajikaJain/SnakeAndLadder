@@ -30,6 +30,8 @@ jacocoTestReport {
     dependsOn test
     reports {
         xml.required.set(true)
+        xml.outputLocation.set(file("$buildDir/reports/jacoco/test/jacocoTestReport.xml"))  // Correct path for JaCoCo XML
+
     }
 }
 jacoco {
